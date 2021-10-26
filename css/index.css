@@ -23,8 +23,10 @@
 }
 
 #Subtitle {
-  font-size: max(4em, 20px);
+  font-size: max(3.5rem, 20px);
   font-weight: 400;
+  white-space: normal;
+  max-width: 100vw;
 }
 
 #ContactCardContainer {
