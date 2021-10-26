@@ -1,0 +1,93 @@
+#professionalPic {
+  float: right;
+  margin: 10px;
+  width: 13vw;
+  height: 15vw;
+  min-width: 260px;
+  min-height: 300px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: var(--main-gradient);
+  border-image-slice: 1;
+  display: block;
+}
+
+.infoTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-style: hidden;
+  margin-top: 2.5vw;
+}
+
+.infoTable td {
+  border: 2px solid var(--main-txt-color);
+  width: 50%;
+}
+
+.tableHeaders td {
+  text-align: center;
+  font-weight: 700;
+}
+
+.tableContent ul {
+  list-style-type: square;
+  font-size: max(1.25vw, 12.5px);
+}
+
+.indented {
+  margin-left: 2.5vw;
+}
+
+#accomplishments {
+  list-style-type: square;
+}
+
+#pageBody {
+  font-size: max(2vw, 20px);
+}
+
+@media only screen and (max-width: 1000px) {
+  #professionalPic {
+    float: none;
+  }
+}
+
+#resumeEmbed {
+  width: 42.5vw;
+  height: 55vw;
+  position: relative;
+  min-width: 425px;
+  min-height: 550px;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+#openButton {
+  width: 42.5vw;
+  height: 5vw;
+  position: relative;
+  min-width: 425px;
+  min-height: 50px;
+  left: 50%;
+  top: 20px;
+  padding: 0;
+  margin: 0;
+  transform: translateX(-50%);
+  cursor: pointer;
+  background-image: var(--main-gradient);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: right;
+  transition: background-size 0.5s ease;
+  color: var(--main-bg-color);
+  font-size: max(3.5vw, 35px);
+  text-align: center;
+}
+
+#openButton:hover {
+  background-position: left;
+  background-size: 100% 100%;
+}

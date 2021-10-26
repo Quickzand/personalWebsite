@@ -1,0 +1,451 @@
+.card {
+  width: 5vw;
+  height: 5vw;
+  display: flex;
+  border-style: solid;
+  border-color: var(--main-txt-color);
+  border-size: 0.2vw;
+  flex-direction: row;
+  border-radius: 1vw;
+  cursor: pointer;
+  transition: transform 0.5s ease, border 0.2s;
+  margin-bottom: -1vh;
+  background-size: cover;
+  background-color: var(--main-accent-color);
+  -webkit-box-shadow: 0px -1vh 1vh 1vw rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px -1vh 1vh 1vw rgba(0, 0, 0, 1);
+  box-shadow: 0px -0.5vh 0.25vh 0.25vw rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  align-items: center;
+}
+
+.card#Homesub {
+  background-image: url("../projectPreviews/thumbnails/Homesub.png");
+}
+
+.card#controlCenter {
+  background-image: url("../projectPreviews/thumbnails/ControlCenter.png");
+}
+
+.card#Zoomba {
+  background-image: url("../projectPreviews/thumbnails/Zoomba.png");
+}
+
+.card#Bingo {
+  background-image: url("../projectPreviews/thumbnails/Bingo.png");
+}
+
+.card#declutterMode {
+  background-image: url("../projectPreviews/thumbnails/DeclutterMode.png");
+}
+
+.card#Stories {
+  background-image: url("../projectPreviews/thumbnails/Google Meets Stories Logo.png");
+}
+
+.card:hover {
+  transition: transform 0.5s;
+  transform: translateX(40%);
+}
+
+.card:hover~.card {
+  transform: translateY(15px);
+}
+
+.cardTitle {
+  margin-left: 5.5vw;
+  display: inline-block;
+}
+
+.cardTitle>span {
+  display: inline-block;
+  background-image: var(--main-gradient);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-position: left;
+  transition: background-size 0.25s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+.card:hover .cardTitle>span {
+  background-size: 100% 100%;
+}
+
+.card:hover .cardTitle {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card.activated {
+  border-style: solid;
+  border-color: var(--main-accent-color);
+  border-width: 0.2vw;
+}
+
+.cardHolder {
+  width: 7vw;
+  min-height: 32vw;
+  padding-bottom: 0.5vw;
+  background: var(--inset-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: visible;
+  radius: 1vw;
+  border-right: solid var(--main-bg-color) 5px;
+}
+
+#projectsContainer {
+  width: 100%;
+  background: var(--inset-bg-color);
+  border-radius: 1vw;
+  overflow: visible;
+  display: flex;
+  position: relative;
+  align-items: center;
+  align-content: center;
+}
+
+#projectDescriptions {
+  width: 90%;
+}
+
+.projectDescriptionContainer {
+  display: none;
+  opacity: 0;
+  transition: opacity 2s, display 2s;
+}
+
+.setHomesub .homesubDescription {
+  display: block;
+  opacity: 1;
+}
+
+.setcontrolCenter .ccDescription {
+  display: block;
+  opacity: 1;
+}
+
+.setZoomba .zoombaDescription {
+  display: block;
+  opacity: 1;
+}
+
+.setBingo .bingoDescription {
+  display: block;
+  opacity: 1;
+}
+
+.setdeclutterMode .declutterModeDescription {
+  display: block;
+  opacity: 1;
+}
+
+.setStories .storiesDescription {
+  display: block;
+  opacity: 1;
+}
+
+.projectHeader .underline {
+  width: 100%;
+  height: 0.15vw;
+  display: block;
+  background-position: right;
+  background-image: var(--main-gradient);
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.projectHeader {
+  font-weight: 600;
+  font-size: 2.5vw;
+  display: inline-block;
+}
+
+.projectImg {
+  float: left;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 24vw;
+  height: 24vw;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  transform: translateY(10%);
+  border: 0.1vw var(--main-accent-color) solid;
+}
+
+.contentArea {
+  float: right;
+  width: Calc(100% - 27vw);
+}
+
+.descriptionContent {
+  font-size: 1.35vw;
+}
+
+.storiesDescription .projectImg {
+  background-image: url("../projectPreviews/stories.png");
+}
+
+.storiesDescription .projectHeader::before {
+  content: "Google Meets Stories";
+}
+
+.storiesDescription .descriptionContent::before {
+  content: "Although Google Meets Stories started out as a joke between my friends and I, it has quickly turned into one the projects I’m most proud of. Throughout the course of its development I got the chance to work with full stack development. Stories was my first chance to build a database from the ground up, as well as integrate my application with an external API, namely Google’s gApi, and connect all of the backend into a clean and universal frontend."
+}
+
+.homesubDescription .projectImg {
+  background-image: url("../projectPreviews/homesub.png");
+}
+
+.homesubDescription .projectHeader::before {
+  content: "Homesub";
+}
+
+.homesubDescription .descriptionContent::before {
+  content: "Homesub is my coronavirus relief effort. As someone who has experienced firsthand how difficult it can be to be completely disconnected from the physical environment of school, I wanted to find a way to help my classmates through the rough transition period to online learning. Seeing the difficulties that computer science students had with writing their code from home, I created a website for them to write, test, and submit all of their code from. Homesub was my first time working with any sort of backend, and was a valuable learning experience when it came to working with server side development."
+}
+
+.ccDescription .descriptionContent::before {
+  content: "While working with my computer, I noticed that I had a lot of room for automation in my workflow. In order to account for this, I made a personal application that would allow me to control my computer, but my smart home and calendar as well. Making this application allowed me to practice my skills while also learning how to write native apps.";
+}
+
+.ccDescription .projectHeader::before {
+  content: "Control Center";
+}
+
+.ccDescription .projectImg {
+  background-image: url("../projectPreviews/controlCenter.png");
+}
+
+.zoombaDescription .descriptionContent::before {
+  content: "While working with my computer, I noticed that I had a lot of room for automation in my workflow. In order to account for this, I made a personal application that would allow me to control my computer, but my smart home and calendar as well. Making this application allowed me to practice my skills while also learning how to write native apps.";
+}
+
+.zoombaDescription .projectHeader::before {
+  content: "Z-1";
+}
+
+.zoombaDescription .projectImg {
+  background-image: url("../projectPreviews/zoomba.png");
+}
+
+.bingoDescription .projectImg {
+  background-image: url("../projectPreviews/bingo.png");
+}
+
+.bingoDescription .descriptionContent::before {
+  content: "For my first ever programming job, I made a bingo application for an aparent complex in New York. Working on the application built up my skills in HTML, CSS, and Javascript, while also gaining experience in working with a client and their input.";
+}
+
+.bingoDescription .projectHeader::before {
+  content: "Bingo";
+}
+
+.declutterModeDescription .projectImg {
+  background-image: url("../projectPreviews/projectDM.png");
+}
+
+.declutterModeDescription .descriptionContent::before {
+  content: "As apart of a hackathon hosted by Johnson and Johnson at Suncaost High School, I, along with a team of fellow students, designed declutter mode. Declutter mode is an application meant to help students destress by allowing them to interract with a virtual pet by completing destressing tasks.";
+}
+
+.declutterModeDescription .projectHeader::before {
+  content: "Declutter Mode";
+}
+
+.linkBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  height: calc(5vw + 6px);
+}
+
+.Github:hover {
+  fill: #2ab13e;
+}
+
+.Website:hover {
+  fill: #0f80ff;
+}
+
+.collaboratorWebsite:hover {
+  fill: #fecc66;
+}
+
+.contactIcon {
+  fill: var(--main-txt-color);
+  transition: fill .4s ease;
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
+  margin: 6px;
+}
+
+@media only screen and (max-width: 1000px) {
+  #projectsContainer {
+    width: 100%;
+    height: 75vh;
+    background: var(--inset-bg-color);
+    border-radius: 1vw;
+    overflow: visible;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    align-items: center;
+    align-content: center;
+  }
+
+  .cardHolder {
+    width: 100%;
+    height: 15vw;
+    min-height: 0;
+    background: var(--inset-bg-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    radius: 50%;
+    border-top: solid var(--main-bg-color) 5px;
+    border-right: none;
+  }
+
+  .card {
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    border-style: solid;
+    border-color: var(--main-txt-color);
+    border-width: 0.7vw;
+    flex-direction: row;
+    border-radius: 1vw;
+    cursor: pointer;
+    transition: transform 0.5s ease, border 0.2s;
+    margin-bottom: -1vh;
+    background-size: cover;
+    background-color: var(--main-accent-color);
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    z-index: 1;
+    align-items: center;
+  }
+
+  .card.activated {
+    border-style: solid;
+    border-color: var(--main-accent-color);
+    border-width: 0.7vw;
+  }
+
+  .card:hover {
+    transition: transform 0.5s;
+    transform: translateY(-40%);
+  }
+
+  .card:hover~.card {
+    transform: none;
+  }
+
+  .cardTitle {
+    margin-left: 0;
+    margin-top: 250%;
+    display: none;
+  }
+
+  #projectDescriptions {
+    width: 90%;
+    height: 100%;
+  }
+
+  .projectHeader {
+    font-weight: 600;
+    font-size: 5vw;
+    display: inline-block;
+  }
+
+  .projectImg {
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 50vw;
+    height: 50vw;
+    margin-top: 1vw;
+    margin-right: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border: 0.5vw var(--main-accent-color) solid;
+  }
+
+  .contentArea {
+    width: 100%;
+  }
+
+  .descriptionContent {
+    font-size: 2.2vw;
+    padding: 2vw;
+    height: 100%;
+  }
+
+  .projectDescriptionContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: none;
+    height: Calc(100% - 15vw);
+  }
+
+  .setHomesub .homesubDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .setcontrolCenter .ccDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .setZoomba .zoombaDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .setBingo .bingoDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .setdeclutterMode .declutterModeDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .setStories .storiesDescription {
+    display: flex;
+    opacity: 1;
+  }
+
+  .linkBar {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    height: calc(4vw);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateY(-75%);
+    z-index: 5;
+  }
+}

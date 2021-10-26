@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects | Matthew Sand</title>
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/projectPages/main.css">
+  <link rel="icon" href="../icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../icon.ico" type="image/x-icon">
+  <meta name="description" content="Aspiring Computer Scientist">
+  <meta name="keywords" content="Matthew, Sand, Javascript, Developer, Resume, Matthew Sand, Development, Student, Creator, Work, Job ">
+  <meta name="author" content="Matthew Sand">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Matthew Sand" />
+  <meta property="og:description" content="Aspiring Computer Scientist" />
+  <meta property="og:image" content="preview.png" />
+</head>
+
+<body>
+  <div id="mobileNav" class="closed">
+    <div class="mobileNavOption" onclick="transitionLink('../about.html')">About</div>
+    <div class="mobileNavOption" onclick="transitionLink('../skills.html')">Skills</div>
+    <div class="mobileNavOption" onclick="transitionLink('../projects.html')">Projects</div>
+    <div class="mobileNavOption" onclick="transitionLink('../contact.html')">Contact</div>
+  </div>
+  <svg version="1.1" id="mobileNavButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="44.776px" height="44.776px" viewBox="0 0 44.776 44.776" style="enable-background:new 0 0 44.776 44.776;"
+    xml:space="preserve" onclick="toggleMobileNav()">
+    <g>
+      <g>
+        <g>
+          <path d="M39.776,12.766H5c-2.761,0-5-2.239-5-5s2.239-5,5-5h34.776c2.761,0,5,2.239,5,5S42.537,12.766,39.776,12.766z" />
+        </g>
+        <g>
+          <path d="M39.776,27.388H5c-2.761,0-5-2.239-5-5c0-2.762,2.239-5,5-5h34.776c2.761,0,5,2.238,5,5
+          C44.776,25.149,42.537,27.388,39.776,27.388z" />
+        </g>
+        <g>
+          <path d="M39.776,42.01H5c-2.761,0-5-2.239-5-5c0-2.762,2.239-5,5-5h34.776c2.761,0,5,2.238,5,5
+          C44.776,39.771,42.537,42.01,39.776,42.01z" />
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div id="mobileLogo" onclick="transitionLink('../index.html')"> </div>
+  <div id="navBar">
+    <div id="Logo" onclick="transitionLink('../index.html')">
+
+    </div>
+    <div id="navContainer">
+      <div class="navButton" onclick="transitionLink('../contact.html')">
+        Contact
+      </div>
+      <div class="navButton selected" onclick="transitionLink('../projects.html')">
+        Projects
+      </div>
+      <div class="navButton" onclick="transitionLink('../skills.html')">
+        Skills
+      </div>
+      <div class="navButton" onclick="transitionLink('../about.html')">
+        About
+      </div>
+      <div id="underBar">
+
+      </div>
+    </div>
+
+  </div>
+  <div id="pageBody">
+
+    <div class="backButton" onclick="transitionLink('../projects.html')">
+      < Projects </div>
+        <div id="projectContainer">
+          <div class="projectHeader"> Wifi Panda
+            <div class="underline"></div>
+          </div>
+          <div class="upperProjectContainer">
+            <div class="projectImageContainer">
+              <img src="projectImages/wp.png" alt="An image of the project" id="projectImage">
+            </div>
+            <div class="projectLinksContainer">
+              <div class="projectLink github" onclick="openLink('https://github.com/Quickzand/Blooprint')">
+                <div class="iconContainer ">
+                  <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="contactIcon tooltip Github">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
+                      transform="scale(64)" />
+                  </svg>
+                </div>
+                Github
+              </div>
+              <div class="projectLink liveLink" onclick="openLink('https://www.matthewsand.info/wifi-panda/')">
+                <div class="iconContainer">
+                  <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+                    <path id="Ellipse" d="M500 1000 C223.858 1000 0 776.142 0 500 0 223.858 223.858 0 500 0 776.142 0 1000 223.858 1000 500 1000 776.142 776.142 1000 500 1000 Z M289 838 L875.885 500 289 162 289 838 Z" stroke="none" />
+                  </svg>
+                </div>
+                Live Demo
+              </div>
+
+
+            </div>
+          </div>
+          <div class="projectSummary">
+            For the HackMIT hackathon, my group and I made Wifi Panda. Wifi Panda is a small web app that pins all nearby wifi hotspots, and specifies libraries and coffee shops. The app uses the open maps api to retrieve wifi hotspot data as well as
+            the google maps api to display the pins on a map.
+          </div>
+        </div>
+        <div id="Lollipop" class="enteringPage"> </div>
+        <script src="../basicFunctions.js">
+
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,186 @@
+#projectContainer {
+  width: 100%;
+  /* height: 5000px; */
+  border-radius: 25px;
+  background: var(--inset-bg-color);
+}
+
+.pageHeader {
+  cursor: pointer;
+  transition: background-size 0.5s;
+  background-position: left;
+  animation: none;
+}
+
+.pageHeader:first-letter {
+  font-weight: 100;
+  /* font-size: 6vw; */
+}
+
+.pageHeader:hover {
+  background-size: 100% 100%;
+  background-position: right;
+}
+
+.backButton {
+  font-size: max(3.5vw, 35px);
+  font-weight: lighter;
+  padding: 0;
+  line-height: 1;
+  display: inline-block;
+  cursor: pointer;
+  background-image: var(--main-gradient);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: right;
+  transition: background-size 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  background-position: right;
+  margin-bottom: 1vw;
+}
+
+.backButton::first-letter {
+  font-size: max(5vw, 50px);
+  font-weight: 300;
+}
+
+.backButton:hover {
+  background-size: 100%;
+  background-position: left;
+}
+
+.backButton:active {
+  background-size: 100%;
+  background-position: left;
+}
+
+.projectHeader {
+  font-size: max(5vw, 50px);
+}
+
+.projectHeader::first-letter {
+  margin-left: 10px;
+}
+
+.projectHeader .underline {
+  width: 100%;
+  height: max(0.3vw, 3px);
+  transform: translateY(-2vw);
+  background-position: right;
+  background-image: var(--main-gradient);
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  position: relative;
+  padding-bottom: 10px;
+  margin-top: 1vw;
+  line-height: 0;
+}
+
+.projectImageContainer {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#projectImage {
+  height: max(25vw, 250px);
+  outline: max(0.25vw, 2.5px) solid var(--main-accent-color);
+}
+
+.projectSummary {
+  font-size: max(1.5vw, 15px);
+  padding: max(1.5vw, 15px);
+}
+
+.upperProjectContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectLinksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projectLink {
+  background: var(--main-bg-color);
+  width: max(20vw, 200px);
+  padding-right: 1vw;
+  font-size: max(2.5vw, 25px);
+  border-radius: 4vw;
+  /* text-align: right; */
+  margin-right: max(10vw, 100px);
+  display: flex;
+  cursor: pointer;
+  transition: filter 0.4s ease-in-out;
+  margin-top: 2vw;
+}
+
+.projectLink:first-child {
+  margin-top: 0;
+}
+
+.projectLink .iconContainer {
+  display: grid;
+  place-items: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.projectLink svg {
+  fill: var(--main-txt-color);
+  transition: fill .4s ease-in-out;
+  height: max(2.5vw, 25px);
+  cursor: pointer;
+}
+
+.projectLink:hover svg {
+  fill: var(--main-accent-color);
+}
+
+.projectLink:hover {
+  filter: brightness(150%);
+}
+
+.projectLink.website:hover svg {
+  fill: #0f80ff;
+}
+
+.projectLink.github:hover svg {
+  fill: #2ab13e;
+}
+
+.projectLink.liveLink:hover svg {
+  fill: #fc0107;
+}
+
+.projectLink.collaborator:hover svg {
+  fill: #fecc66;
+}
+
+@media only screen and (max-width: 1000px) {
+  .upperProjectContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .projectLinksContainer {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .projectLink {
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 2px;
+  }
+}

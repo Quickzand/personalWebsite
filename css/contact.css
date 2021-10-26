@@ -1,0 +1,89 @@
+input {
+  width: 35vw;
+  height: 4vw;
+  font-size: 2.5vw;
+  display: block;
+  border: none;
+  background: var(--inset-bg-color);
+  color: var(--main-txt-color)
+}
+
+label {
+  font-size: 3vw;
+}
+
+#contactContainer {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+#inputsContainer {
+  margin-right: min(50px, 5vw);
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+textarea {
+  float: right;
+  height: 27vw;
+  width: 40vw;
+  background: var(--inset-bg-color);
+  color: var(--main-txt-color);
+  font-size: 1.5vw;
+  display: block;
+  border: none;
+}
+
+textarea:focus {
+  border: solid var(--main-accent-color) 1px;
+}
+
+input:hover+.inputUnderline {
+  width: 100%;
+}
+
+input:focus+.inputUnderline {
+  background-size: 100% 100%;
+  width: 100%;
+}
+
+input:valid+.inputUnderline {
+  background-size: 100% 100%;
+  width: 100%;
+}
+
+.inputUnderline {
+  width: 0;
+  height: 5px;
+  background-image: var(--main-gradient);
+  background-position: right;
+  background-color: var(--main-txt-color);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  transition: ease 0.4s;
+  padding: 0;
+  margin: 0;
+}
+
+input[type=submit] {
+  background-image: var(--main-gradient);
+  background-position: right;
+  background-color: var(--inset-bg-color);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  cursor: pointer;
+  transition: background-size ease 0.4s;
+  margin-top: 0.85vw;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  background-size: 100% 100%;
+}

@@ -1,0 +1,329 @@
+#projectsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+}
+
+
+.header {
+  margin-bottom: 2vw;
+  font-size: max(4vw, 40px);
+  line-height: normal;
+}
+
+.header::first-letter {
+  font-size: inherit;
+
+}
+
+.cardContainer {
+  width: 25vw;
+  height: 25vw;
+  min-width: 300px;
+  min-height: 300px;
+  background-color: var(--inset-bg-color);
+  background-image: var(--main-gradient);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 0%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background-size 0.25s 0.2s ease-in-out;
+  position: relative;
+  margin-right: 1vw;
+  margin-bottom: max(10vw, 100px);
+}
+
+.cardContainer:first-child {
+  margin-left: 0;
+}
+
+.cardContainer:hover {
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+.cardContainer:hover .previewCard {
+  height: 95%;
+}
+
+.previewCard {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  transition: height 0.25s ease-in-out;
+}
+
+.thumbnail {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 95%;
+  height: 95%;
+}
+
+.cardTitle {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  width: calc(100%);
+  text-align: center;
+  background: var(--main-txt-color);
+  color: var(--main-bg-color);
+  /* outline: var(--inset-bg-color) solid 10px; */
+  font-size: max(3.5vw, 35px);
+}
+
+.cardContent {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  place-items: center;
+  justify-content: center;
+}
+
+.attribute {
+  padding-left: 1vw;
+  padding-right: 1vw;
+  background: #14ae57;
+  display: inline-block;
+  box-shadow: 0.25vw 0.25vw #585554;
+  font-size: max(1.5vw, 15px);
+  height: max(2.2vw, 22px);
+  margin-right: 2vw;
+}
+
+
+#recentProjectsList {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+.repoName {
+  font-size: max(5vw, 50px);
+  cursor: pointer;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.repoDescription {
+  font-size: max(2vw, 20px);
+  font-weight: 100;
+}
+
+.gitCard {
+  background-color: var(--inset-bg-color);
+  margin-bottom: 1vw;
+  margin-right: 1vw;
+  border-radius: 15px;
+  padding: 1.5vw;
+  width: 100%;
+  overflow: hidden;
+}
+
+.commitRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1vw;
+  border-bottom: #585554 solid 1px;
+  text-overflow: ellipsis;
+}
+
+.commitMessage {
+  font-size: max(1.5vw, 15px);
+  font-weight: 400;
+  width: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.commitAuthor {
+  font-size: max(1vw, 10px);
+  font-weight: 300;
+  width: 22%;
+  text-align: right;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-right: 1%;
+  cursor: pointer;
+}
+
+
+
+.commitAvatar {
+  width: max(2%, 15px);
+  border-radius: 50%;
+  margin-left: 1vw;
+  cursor: pointer;
+
+}
+
+.commitAuthor:hover,
+.commitAvatar:hover,
+.commitMessage:hover,
+.repoName:hover {
+  filter: brightness(0.6);
+}
+
+
+.commitDate {
+  font-size: max(1vw, 10px);
+  font-weight: 100;
+  width: 25%;
+  text-align: center;
+  text-overflow: "";
+  overflow: hidden;
+  /* white-space: nowrap; */
+}
+
+.languageData {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.language {
+  padding-left: max(2vw, 20px);
+  padding-right: max(2vw, 20px);
+  font-size: max(1vw, 10px);
+  font-weight: 300;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  overflow: hidden;
+  text-align: center;
+  text-overflow: ellipsis;
+}
+
+
+
+.gitDate {
+  font-size: max(1.2vw, 12px);
+  font-weight: 200;
+}
+
+.gitCardFooter {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.gitCardHeader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: #14ae57 solid 1px;
+  margin-bottom: 5px;
+  align-items: end;
+}
+
+
+
+
+.gitUserIcon {
+  width: max(6vw, 60px);
+  height: max(6vw, 60px);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.gitUserIcon:hover {
+  filter: brightness(50%);
+}
+
+#homesub .previewCard {
+  background-image: url("../projectPreviews/homesub.png");
+}
+
+#homesub .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/Homesub.png");
+}
+
+#stories .previewCard {
+  background-image: url("../projectPreviews/stories.png");
+}
+
+#stories .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/Google Meets Stories Logo.png");
+}
+
+#zoomba .previewCard {
+  background-image: url("../projectPreviews/zoomba.png");
+}
+
+#zoomba .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/Zoomba.png");
+}
+
+#wp .previewCard {
+  background-image: url("../projectPreviews/wp.png");
+}
+
+#wp .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/WifiPanda.png");
+}
+
+#bingo .previewCard {
+  background-image: url("../projectPreviews/bingo.png");
+}
+
+#bingo .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/Bingo.png");
+}
+
+#dequeue .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/dequeue.png");
+}
+
+#dequeue .previewCard {
+  background-image: url("../projectPreviews/dequeue.png");
+}
+
+
+#tankz .previewCard {
+  background-image: url("../projectPreviews/tankz.png");
+}
+
+#tankz .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/tankz.png");
+}
+
+
+#hostDirectory .previewCard {
+  background-image: url("../projectPreviews/hostDirectory.png");
+}
+
+#hostDirectory .thumbnail {
+  background-image: url("../projectPreviews/thumbnails/hostDirectory.png");
+}
+
+@media only screen and (max-width: 1000px) {
+  .commitAvatar {
+    display: hidden;
+    margin-left: 0;
+  }
+}

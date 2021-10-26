@@ -1,0 +1,537 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --main-bg-color: #222;
+  --inset-bg-color: #111;
+  --main-txt-color: #eaeded;
+  --main-accent-color: #2AF598;
+  --main-gradient: linear-gradient(125deg, #08AEEA 19%, #2AF598 60%);
+  --main-padding: 15px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-gradient);
+  background-position: right;
+  background-color: var(--main-txt-color);
+  background-size: 0 100%;
+  -webkit-transition: 0.5s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-size: 100% 100%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  font-size: 1vw;
+  font-family: 'Roboto', sans-serif;
+  background: var(--main-bg-color);
+  color: var(--main-txt-color);
+  overflow-x: hidden;
+}
+
+#navBar {
+  width: 100%;
+  max-height: 100px;
+  height: 10vw;
+  position: fixed;
+  top: 0px;
+  background: var(--main-bg-color);
+  z-index: 2;
+  border-bottom: solid var(--main-accent-color) 1px;
+}
+
+#navContainer {
+  width: 75%;
+  height: 100%;
+  float: right;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+#underBar {
+  width: 0;
+  height: 5px;
+  background-color: var(--main-accent-color);
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  -webkit-transition: 0.5s ease;
+  transform: translate(-2.5vw);
+}
+
+.navButton {
+  height: 100%;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  font-size: max(3.5vw, 15px);
+  cursor: pointer;
+  width: max(15vw, 120px);
+  background-image: var(--main-gradient);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: right;
+  transition: background-size 0.5s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: max(30px, 2vw);
+}
+
+.navButton:hover {
+  background-size: 100%;
+}
+
+.navButton:nth-child(1):hover~#underBar {
+  width: 10vw;
+  right: calc(0vw);
+  background-color: #1de272;
+}
+
+.navButton:nth-child(2):hover~#underBar {
+  width: 10vw;
+  right: calc(15vw);
+  background-color: #1de272;
+}
+
+.navButton:nth-child(3):hover~#underBar {
+  width: 10vw;
+  right: calc(30vw);
+  background-color: #1de272;
+}
+
+.navButton:nth-child(4):hover~#underBar {
+  width: 10vw;
+  right: calc(45vw);
+  background-color: #1de272;
+}
+
+.navButton.selected {
+  background-size: 100%;
+}
+
+#Logo {
+  max-height: 95px;
+  height: 9vw;
+  width: 9vw;
+  max-width: 95px;
+  float: left;
+  margin-left: 5px;
+  cursor: pointer;
+  background-image: var(--main-gradient);
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: bottom left;
+  -webkit-mask: url('data:image/svg+xml;utf8,<svg  viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Logo"> <path id="M" d="M125 1000 L0 875 0 0 250 0 500 250 750 0 1000 0 1000 1000 750 1000 750 375 500 625 250 375 250 1000 Z" stroke="none" /></svg>') center/contain;
+  fill: var(--main-txt-color);
+  transition: background-size 0.2s ease;
+}
+
+#Logo:hover {
+  background-position: bottom right;
+  background-size: 100%;
+}
+
+#Lollipop {
+  position: fixed;
+  transform: translateX(0%);
+  right: 0%;
+  top: 0;
+  z-index: 1000000;
+  height: 100vh;
+  background: var(--main-bg-color);
+}
+
+.leavingPage {
+  width: 100vw;
+  animation-name: leaveLollipopTransition;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+.enteringPage {
+  width: 0vw;
+  animation-name: enterLollipopTransition;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+}
+
+@keyframes leaveLollipopTransition {
+  0% {
+    width: 0vw;
+  }
+
+  100% {
+    width: 100vw;
+  }
+}
+
+@keyframes enterLollipopTransition {
+  0% {
+    width: 100vw;
+  }
+
+  100% {
+    width: 0vw;
+  }
+}
+
+#pageBody {
+  padding-top: 0;
+  width: calc(100vw - 20vw);
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-size: 1.75vw;
+  line-height: 1.65;
+}
+
+.pageHeader {
+  font-size: max(5vw, 50px);
+  display: inline-block;
+  font-weight: 700;
+  background-image: var(--main-gradient);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: right;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  animation-name: gradientGlint;
+  animation-duration: 1.25s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+  line-height: 1.6;
+}
+
+.pageHeader::first-letter {
+  font-size: max(7vw, 70px);
+}
+
+.pageHeader>.underline {
+  width: 100%;
+  height: max(0.3vw, 3px);
+  transform: translateY(-2vw);
+  background-position: right;
+  background-image: var(--main-gradient);
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  position: relative;
+  padding-bottom: 10px;
+  line-height: 0;
+}
+
+.subcategory {
+  margin-top: 50px;
+}
+
+.header {
+  font-size: max(3vw, 30px);
+  display: inline-block;
+  font-weight: 700;
+  background-image: var(--main-gradient);
+  background-size: 0% 100%;
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  background-position: right;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  color: transparent;
+  animation-name: gradientGlint;
+  animation-duration: 1.25s;
+  animation-delay: 1s;
+  animation-timing-function: ease;
+}
+
+.header::first-letter {
+  font-size: max(3vw, 30px);
+}
+
+.Description {
+  margin-top: -1vw;
+  font-size: max(1.5vw, 15px);
+  color: var(--main-txt-color);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.header>.underline {
+  width: 100%;
+  height: 0.125vw;
+  background-position: right;
+  background-image: var(--main-gradient);
+  background-repeat: no-repeat;
+  background-color: var(--main-txt-color);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.meterContainer {
+  display: inline-block;
+  font-size: max(2vw, 20px);
+  font-weight: 700;
+  margin-left: 1vw;
+}
+
+.barMeter {
+  width: max(15vw, 150px);
+  height: max(2.5vw, 25px);
+  border-radius: max(2.5vw, 25px);
+  overflow: hidden;
+  background: var(--inset-bg-color);
+  display: block;
+}
+
+.meterFill {
+  width: 100%;
+  height: 100%;
+  border-radius: max(2.5vw, 25px);
+  background-image: var(--main-gradient);
+  background-attachment: scroll;
+  background-size: 0% 0%;
+  background-repeat: no-repeat;
+  background-position: left;
+  animation: meterGradientIntro var(--animation-time) 1s ease forwards, gradientPulse 3s var(--animation-time) linear infinite;
+}
+
+.meterValue {
+  height: 100%;
+  overflow: hidden;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: var(--inset-bg-color);
+  color: var(--main-txt-color);
+  text-align: center;
+  border-radius: 7%;
+  padding: 5px 0;
+  font-size: 1vw;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  white-space: nowrap;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+@keyframes gradientGlint {
+  50% {
+    background-size: 100% 100%;
+    background-position: right;
+  }
+
+  51% {
+    background-size: 100% 100%;
+    background-position: left;
+  }
+
+  100% {
+    background-position: left;
+    background-size: 0% 100%;
+  }
+}
+
+@keyframes meterGradientIntro {
+  0% {
+    background-position: top left;
+    background-size: 0% 200%;
+  }
+
+  100% {
+    background-position: top left;
+    background-size: 300% 200%;
+  }
+}
+
+@keyframes gradientPulse {
+  0% {
+    background-position: bottom left;
+  }
+
+  50% {
+    background-position: 50% 0%;
+  }
+
+  100% {
+    background-position: bottom left;
+  }
+}
+
+#mobileNavButton {
+  visibility: hidden;
+}
+
+#mobileLogo {
+  visibility: hidden;
+}
+
+#mobileNav {
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  #mobileNav.open~#mobileLogo {
+    visibility: visible;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-image: var(--main-gradient);
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-color: var(--main-txt-color);
+    background-position: bottom left;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg  viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Logo"> <path id="M" d="M125 1000 L0 875 0 0 250 0 500 250 750 0 1000 0 1000 1000 750 1000 750 375 500 625 250 375 250 1000 Z" stroke="none" /></svg>') center/contain;
+    fill: var(--main-txt-color);
+    transition: background-size 0.2s ease;
+    z-index: 1000;
+  }
+
+  #mobileNav {
+    visibility: visible;
+  }
+
+  #pageBody {
+    padding-top: 2vw;
+    padding-bottom: min(100px, 10vw);
+    width: calc(100vw - 4vw);
+    margin-left: 2vw;
+    margin-right: 2vw;
+    font-size: 1.75vw;
+    line-height: 2;
+  }
+
+  #navBar {
+    width: 100%;
+    max-height: 100px;
+    height: 10vw;
+    position: fixed;
+    top: auto;
+    top: 0px;
+    background: transparent;
+    z-index: 2;
+    border-bottom: none;
+    border-top: none;
+    padding-top: 5px;
+    visibility: hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0px;
+    visibility: hidden;
+  }
+
+  #underBar {
+    visibility: hidden;
+  }
+
+  #mobileNavButton {
+    visibility: visible;
+    cursor: pointer;
+    position: fixed;
+    right: 2vw;
+    top: 2vw;
+    z-index: 2;
+  }
+
+  #mobileNav {
+    width: 100vw;
+    background: var(--main-bg-color);
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 50px;
+    transition: height 0.5s ease-in-out;
+  }
+
+  #mobileNav.closed {
+    height: 0vh;
+    padding: 0;
+    background: none;
+    transition: height 0.5s ease-in-out, background 2s ease-in;
+  }
+
+  #mobileNav.open {
+    height: 100vh;
+  }
+
+  #mobileNav.open~#mobileNavButton {
+    fill: var(--main-txt-color);
+  }
+
+  #mobileNav.closed~#mobileNavButton {
+    fill: var(--main-accent-color)
+  }
+
+  .mobileNavOption {
+    width: 100vw;
+    height: calc(calc(100vh - 100px) * 0.25);
+    font-size: min(20vw, calc(calc(calc(100vh - 100px) * 0.25) - 30px));
+    text-align: center;
+    display: grid;
+    place-items: center;
+    border-top: var(--main-txt-color) 1px solid;
+    border-bottom: var(--main-txt-color) 1px solid;
+    cursor: pointer;
+  }
+
+  .mobileNavOption:first-child {
+    border-top: none;
+  }
+
+  .mobileNavOption:last-child {
+    border-bottom: none;
+  }
+
+  #navContainer {
+    width: calc(100% - max(10vw, 100px));
+    height: 100%;
+    float: left;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  #Logo:active {
+    background-position: bottom right;
+    background-size: 100%;
+  }
+}

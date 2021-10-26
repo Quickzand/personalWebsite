@@ -1,0 +1,77 @@
+#Title {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: auto;
+  white-space: nowrap;
+  cursor: default;
+}
+
+#Name {
+  font-size: 5em;
+  font-weight: 500;
+  background-image: linear-gradient(125deg, #08AEEA 19%, #2AF598 60%);
+  background-size: 100%;
+  background-repeat: none;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+  display: block;
+}
+
+#Subtitle {
+  font-size: 4em;
+  font-weight: 400;
+}
+
+#ContactCardContainer {
+  width: 85vw;
+  height: 10vw;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contactIcon {
+  fill: white;
+  transition: fill .4s ease;
+  width: 5vw;
+  height: 5vw;
+  cursor: pointer;
+  margin: 6px;
+}
+
+#Github:hover {
+  fill: #2ab13e;
+}
+
+#LinkedIn:hover {
+  fill: #0b62a6;
+}
+
+#Instagram:hover {
+  fill: #d30b69;
+}
+
+#Twitter:hover {
+  fill: #579cee;
+}
+
+#Youtube:hover {
+  fill: #be0a19;
+}
+
+#Reddit:hover {
+  fill: #fc2c07;
+}
+
+#Facebook:hover {
+  fill: #314e9c;
+}

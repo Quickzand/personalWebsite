@@ -1,0 +1,115 @@
+.meters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 7vw;
+}
+
+.meterContainer {
+  flex: 0 1 0;
+}
+
+#HTML>.barMeter>.meterValue {
+  width: 100%;
+}
+
+#CSS>.barMeter>.meterValue {
+  width: 100%;
+}
+
+#Javascript>.barMeter>.meterValue {
+  width: 100%;
+}
+
+#SQL>.barMeter>.meterValue {
+  width: 75%;
+}
+
+#PHP>.barMeter>.meterValue {
+  width: 80%;
+}
+
+#Python>.barMeter>.meterValue {
+  width: 95%;
+}
+
+#Csharp>.barMeter>.meterValue {
+  width: 40%;
+}
+
+#Cplusplus>.barMeter>.meterValue {
+  width: 25%;
+}
+
+#Swift>.barMeter>.meterValue {
+  width: 35%;
+}
+
+#MacOS>.barMeter>.meterValue {
+  width: 99%;
+}
+
+#Windows>.barMeter>.meterValue {
+  width: 87%;
+}
+
+#MOS>.barMeter>.meterValue {
+  width: 88%;
+}
+
+#ImageEditing>.barMeter>.meterValue {
+  width: 80%;
+}
+
+#GraphicDesign>.barMeter>.meterValue {
+  width: 85%;
+}
+
+#VideoEditing>.barMeter>.meterValue {
+  width: 70%;
+}
+
+#GameDesign>.barMeter>.meterValue {
+  width: 40%;
+}
+
+#Databases>.barMeter>.meterValue {
+  width: 80%;
+}
+
+#Spreadsheets>.barMeter>.meterValue {
+  width: 50%;
+}
+
+#Electron>.barMeter>.meterValue {
+  width: 85%;
+}
+
+#JQuery>.barMeter>.meterValue {
+  width: 95%;
+}
+
+#Node>.barMeter>.meterValue {
+  width: 90%;
+}
+
+#PWA>.barMeter>.meterValue {
+  width: 75%;
+}
+
+#Unity>.barMeter>.meterValue {
+  width: 65%;
+}
+
+#SwiftUI>.barMeter>.meterValue {
+  width: 35%;
+}
+
+#websockets>.barMeter>.meterValue {
+  width: 50%;
+}
+
+#programmingLanguages {
+  margin-top: -2vw;
+}

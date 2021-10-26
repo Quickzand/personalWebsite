@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Projects | Matthew Sand</title>
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="icon" href="icon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+  <meta name="description" content="Aspiring Computer Scientist">
+  <meta name="keywords"
+    content="Matthew, Sand, Javascript, Developer, Resume, Matthew Sand, Development, Student, Creator, Work, Job ">
+  <meta name="author" content="Matthew Sand">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Matthew Sand" />
+  <meta property="og:description" content="Aspiring Computer Scientist" />
+  <meta property="og:image" content="preview.png" />
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="githubAPI.js" async defer></script>
+
+</head>
+
+<body>
+
+  <div id="mobileNav" class="closed">
+    <div class="mobileNavOption" onclick="transitionLink('about.html')">About</div>
+    <div class="mobileNavOption" onclick="transitionLink('skills.html')">Skills</div>
+    <div class="mobileNavOption" onclick="transitionLink('projects.html')">Projects</div>
+    <div class="mobileNavOption" onclick="transitionLink('contact.html')">Contact</div>
+  </div>
+  <svg version="1.1" id="mobileNavButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px" y="0px" width="44.776px" height="44.776px" viewBox="0 0 44.776 44.776"
+    style="enable-background:new 0 0 44.776 44.776;" xml:space="preserve" onclick="toggleMobileNav()">
+    <g>
+      <g>
+        <g>
+          <path
+            d="M39.776,12.766H5c-2.761,0-5-2.239-5-5s2.239-5,5-5h34.776c2.761,0,5,2.239,5,5S42.537,12.766,39.776,12.766z" />
+        </g>
+        <g>
+          <path d="M39.776,27.388H5c-2.761,0-5-2.239-5-5c0-2.762,2.239-5,5-5h34.776c2.761,0,5,2.238,5,5
+          C44.776,25.149,42.537,27.388,39.776,27.388z" />
+        </g>
+        <g>
+          <path d="M39.776,42.01H5c-2.761,0-5-2.239-5-5c0-2.762,2.239-5,5-5h34.776c2.761,0,5,2.238,5,5
+          C44.776,39.771,42.537,42.01,39.776,42.01z" />
+        </g>
+      </g>
+    </g>
+  </svg>
+  <div id="mobileLogo" onclick="transitionLink('index.html')"> </div>
+  <div id="navBar">
+    <div id="Logo" onclick="transitionLink('index.html')">
+
+    </div>
+    <div id="navContainer">
+      <div class="navButton" onclick="transitionLink('contact.html')">
+        Contact
+      </div>
+      <div class="navButton selected" onclick="transitionLink('projects.html')">
+        Projects
+      </div>
+      <div class="navButton" onclick="transitionLink('skills.html')">
+        Skills
+      </div>
+      <div class="navButton" onclick="transitionLink('about.html')">
+        About
+      </div>
+      <div id="underBar">
+
+      </div>
+    </div>
+
+  </div>
+  <div id="pageBody">
+    <div class="pageHeader">
+      Projects
+      <div class="underline">
+      </div>
+    </div>
+
+    <div id="projectsContainer">
+      <div class="cardContainer" id="dequeue" onclick="transitionLink('projects/dequeue.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="cardContent">
+              <div class="attribute">
+                HTML
+              </div>
+              <div class="attribute">
+                CSS
+              </div>
+              <div class="attribute">
+                Javascript
+              </div>
+              <div class="attribute">
+                NodeJS
+              </div>
+              <div class="attribute">
+                Electron
+              </div>
+              <div class="attribute">
+                Python
+              </div>
+              <div class="attribute">
+                PHP
+              </div>
+              <div class="attribute">
+                PWA
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Dequeue</div>
+      </div>
+
+      <div class="cardContainer" id="homesub" onclick="transitionLink('projects/homesub.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="attribute">
+              HTML
+            </div>
+            <div class="attribute">
+              CSS
+            </div>
+            <div class="attribute">
+              Javascript
+            </div>
+            <div class="attribute">
+              PHP
+            </div>
+            <div class="attribute">
+              SQL
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Homesub</div>
+      </div>
+
+      <div class="cardContainer" id="stories" onclick="transitionLink('projects/stories.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="attribute">
+              HTML
+            </div>
+            <div class="attribute">
+              CSS
+            </div>
+            <div class="attribute">
+              Javascript
+            </div>
+            <div class="attribute">
+              PHP
+            </div>
+            <div class="attribute">
+              SQL
+            </div>
+            <div class="attribute">
+              GApi
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Stories</div>
+      </div>
+
+      <div class="cardContainer" id="zoomba" onclick="transitionLink('projects/projectZeta.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="attribute">
+              HTML
+            </div>
+            <div class="attribute">
+              CSS
+            </div>
+            <div class="attribute">
+              Javascript
+            </div>
+            <div class="attribute">
+              NodeJS
+            </div>
+            <div class="attribute">
+              Electron
+            </div>
+            <div class="attribute">
+              Python
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Project Zeta</div>
+      </div>
+
+      <div class="cardContainer" id="wp" onclick="transitionLink('projects/wp.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="attribute">
+              HTML
+            </div>
+            <div class="attribute">
+              CSS
+            </div>
+            <div class="attribute">
+              Javascript
+            </div>
+            <div class="attribute">
+              PHP
+            </div>
+            <div class="attribute">
+              SQL
+            </div>
+            <div class="attribute">
+              GApi
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Wifi Panda</div>
+      </div>
+      <div class="cardContainer" id="hostDirectory" onclick="transitionLink('projects/hostDirectory.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="cardContent">
+              <div class="attribute">
+                HTML
+              </div>
+              <div class="attribute">
+                CSS
+              </div>
+              <div class="attribute">
+                Javascript
+              </div>
+              <div class="attribute">
+                NodeJS
+              </div>
+              <div class="attribute">
+                SQL
+              </div>
+              <div class="attribute">
+                Websockets
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Host Directory</div>
+      </div>
+      <div class="cardContainer" id="tankz" onclick="transitionLink('projects/tankz.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="cardContent">
+              <div class="attribute">
+                HTML
+              </div>
+              <div class="attribute">
+                CSS
+              </div>
+              <div class="attribute">
+                Javascript
+              </div>
+              <div class="attribute">
+                PHP
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Tank-Z</div>
+      </div>
+      <div class="cardContainer" id="bingo" onclick="transitionLink('projects/bingo.html')">
+        <div class="thumbnail"></div>
+        <div class="previewCard">
+          <div class="cardContent">
+            <div class="attribute">
+              HTML
+            </div>
+            <div class="attribute">
+              CSS
+            </div>
+            <div class="attribute">
+              Javascript
+            </div>
+          </div>
+        </div>
+        <div class="cardTitle">Bingo</div>
+      </div>
+    </div>
+    <div id="recentProjects">
+      <div class="header">
+        What I've Been Working On
+        <div class="underline">
+        </div>
+      </div>
+      <div id="recentProjectsList"></div>
+    </div>
+    <div id="Lollipop" class="enteringPage"> </div>
+    <script src="basicFunctions.js">
+
+    </script>
+    <script>
+      document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] +
+        ':35729/livereload.js?snipver=1"></' + 'script>')
+    </script>
+</body>
+
+</html>
